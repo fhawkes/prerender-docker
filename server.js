@@ -20,6 +20,7 @@ server.use(forwardHeaders);
 server.use(prerender.sendPrerenderHeader());
 server.use(prerender.removeScriptTags());
 server.use(prerender.httpHeaders());
+server.use(prerender.basicAuth());
 if (process.env.DEBUG_PAGES) {
 	server.use(prerender.logger());
 }
